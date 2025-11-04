@@ -1,0 +1,945 @@
+.news-1 {
+  position: relative;
+
+  .regulation-shape {
+    position: absolute;
+    top: 8%;
+    left: 5%;
+
+    @include breakpoint(max-xl) {
+      display: none;
+    }
+  }
+
+  .news-item {
+    margin-top: 30px;
+    border-radius: 16px;
+    border: $border-color;
+    background-color: $bg-color-2;
+    overflow: hidden;
+    @include transition;
+
+    .thumb {
+      overflow: hidden;
+
+      img {
+        @include imgw;
+        transform: 1;
+        @include transition;
+      }
+    }
+
+    .content {
+      padding: 16px 20px 30px;
+      @include transition;
+
+      @include breakpoint(max-xl) {
+        padding: 16px 12px 30px;
+      }
+
+      .news-meta {
+        @include flex;
+        gap: 24px;
+        margin-bottom: 10px;
+
+        .green {
+          color: $theme-color;
+        }
+
+        .date {
+          span {
+            width: 5px;
+            height: 5px;
+            border-radius: 100px;
+            background-color: $text-color;
+            display: inline-block;
+            margin-bottom: 3px;
+            margin-right: 3px;
+          }
+        }
+      }
+
+      h4 {
+        margin-bottom: 20px;
+
+        @include breakpoint(max-xl) {
+          font-size: 18px;
+        }
+
+        &:hover {
+          a {
+            color: $theme-color;
+          }
+        }
+      }
+
+      .news-btn {
+        @include flex;
+        gap: 12px;
+
+        .icon {
+          width: 44px;
+          height: 44px;
+          border: 1.5px solid $theme-color;
+          border-radius: 100px;
+          @include flex;
+          justify-content: center;
+          cursor: pointer;
+
+          i {
+            color: $theme-color;
+            transform: rotate(-45deg);
+          }
+        }
+
+        .link-btn {
+          font-family: Manrope;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 24px;
+        }
+
+        &:hover {
+          .icon {
+            background-color: $theme-color;
+
+            i {
+              color: $bg-color-2;
+            }
+          }
+        }
+      }
+
+      .news-btns {
+        overflow: hidden;
+        @include flex;
+        gap: 10px;
+
+        i{
+          width: 44px;
+          height: 44px;
+          border: 1.5px solid $theme-color;
+          border-radius: 100px;
+          background: transparent;
+          @include flex;
+          justify-content: center;
+          cursor: pointer;
+          transform: rotate(-45deg);
+          @include transition;
+          color: $theme-color;
+          z-index: 9;
+        }
+
+        a {
+          font-family: Manrope;
+          font-size: 16px;
+          font-weight: 600;
+          position: relative;
+          left: -100px;
+          opacity: 0;
+          visibility: hidden;
+          @include transition;
+        }
+
+        &:hover { 
+          i {
+            background-color: $theme-color;
+            color: $bg-color-2;
+          }
+
+          a {
+            left: 0;
+            opacity: 1;
+            visibility: visible;
+            color: $theme-color;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      border-color: $theme-color;
+
+      .thumb {
+        img {
+          transform: scale(1.1);
+        }
+      }
+
+      .content {
+        background: $bg-color;
+      }
+
+      .news-btns {
+        i {
+          background-color: $theme-color;
+          color: $bg-color-2;
+        }
+
+        a {
+          left: 0;
+          opacity: 1;
+          visibility: visible;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .theme-btn {
+    margin: 50px auto 0;
+  }
+
+  &.style-3 {
+    .content {
+      padding: 30px 30px 10px;
+
+      @include breakpoint(max-xl) {
+        padding: 20px 20px 10px;
+      }
+
+      h4 {
+        font-size: 20px;
+
+        @include breakpoint(max-lg) {
+              font-size: 19px;
+        }
+
+        @include breakpoint(max-sm) {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .theme-btn {
+      max-width: 100%;
+      margin: 0;
+    }
+  }
+}
+
+.news-content-wrapper {
+
+  .news-item-2 {
+    margin-top: 30px;
+    padding: 16px 32px;
+    border: $border-color;
+    border-radius: 16px;
+    background-color: $bg-color;
+    @include flex;
+    justify-content: space-between;
+    position: relative;
+
+    @include breakpoint(max-xl) {
+      padding: 20px;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .title {
+      width: 440px;
+
+      h4 {
+
+        a {
+          &:hover {
+            color: $theme-color;
+          }
+        }
+
+        @include breakpoint(max-xl) {
+          font-size: 20px;
+          width: 125%;
+        }
+
+        @include breakpoint(max-sm) {
+          width: 100%;
+        }
+      }
+    }
+
+    .content {
+      @include breakpoint(max-xl) {
+        width: 100%;
+
+        p {
+          br {
+            display: none
+          }
+        }
+      }
+    }
+
+    .post-meta {
+      @include flex;
+      gap: 24px;
+
+      .green {
+        color: $theme-color;
+      }
+
+      li {
+        span {
+          width: 8px;
+          height: 8px;
+          background-color: $text-color;
+          border-radius: 100px;
+          margin-right: 5px;
+          display: inline-block;
+        }
+      }
+    }
+
+    .thumb-hover {
+      width: 290px;
+      height: 320px;
+      position: absolute;
+      border-radius: 16px;
+      top: 50%;
+      transform: translateY(-50%) rotate(10deg);
+      inset-inline-start: 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-x: 75%;
+      opacity: 0;
+      transition:
+        opacity 0.3s,
+        transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+      margin: -200px 0 0 -50px;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 2;
+      visibility: hidden;
+    }
+
+    &:hover {
+      border-color: $theme-color;
+      background-color: $bg-color-2;
+
+      .thumb-hover {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    &.style-2 {
+      border-color: $theme-color;
+      background-color: #f6fffb;
+    }
+  }
+}
+
+ .news-item-3 {
+    margin-top: 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(193, 193, 193, 0.16);
+    background-color: $bg-color;
+    overflow: hidden;
+    @include transition;
+
+    .thumb {
+      overflow: hidden;
+
+      img {
+        @include imgw;
+        transform: 1;
+        @include transition;
+      }
+    }
+
+    .content {
+      padding: 16px 20px 30px;
+      @include transition;
+
+      @include breakpoint(max-xl) {
+        padding: 16px 12px 30px;
+      }
+
+      .news-meta {
+        @include flex;
+        gap: 24px;
+        margin-bottom: 10px;
+
+        .green {
+          color: $theme-color;
+        }
+
+        .date {
+          span {
+            width: 5px;
+            height: 5px;
+            border-radius: 100px;
+            background-color: $text-color;
+            display: inline-block;
+            margin-bottom: 3px;
+            margin-right: 3px;
+          }
+        }
+      }
+
+      h4 {
+        margin-bottom: 20px;
+
+        @include breakpoint(max-xl) {
+          font-size: 18px;
+        }
+
+        &:hover {
+          a {
+            color: $theme-color;
+          }
+        }
+      }
+
+      .news-btn {
+        @include flex;
+        gap: 12px;
+
+        .icon {
+          width: 44px;
+          height: 44px;
+          border: 1.5px solid $theme-color;
+          border-radius: 100px;
+          @include flex;
+          justify-content: center;
+          cursor: pointer;
+
+          i {
+            color: $theme-color;
+            transform: rotate(-45deg);
+          }
+        }
+
+        .link-btn {
+          font-family: Manrope;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 24px;
+        }
+
+        &:hover {
+          .icon {
+            background-color: $theme-color;
+
+            i {
+              color: $header-color;
+            }
+          }
+        }
+      }
+
+      .news-btns {
+        overflow: hidden;
+        @include flex;
+        gap: 10px;
+
+        i{
+          width: 44px;
+          height: 44px;
+          border: 1.5px solid $theme-color;
+          border-radius: 100px;
+          background: transparent;
+          @include flex;
+          justify-content: center;
+          cursor: pointer;
+          transform: rotate(-45deg);
+          @include transition;
+          color: $theme-color;
+          z-index: 9;
+        }
+
+        a {
+          font-family: Manrope;
+          font-size: 16px;
+          font-weight: 600;
+          position: relative;
+          left: -100px;
+          opacity: 0;
+          visibility: hidden;
+          @include transition;
+        }
+
+        &:hover { 
+          i {
+            background-color: $theme-color;
+            color: $bg-color-2;
+          }
+
+          a {
+            left: 0;
+            opacity: 1;
+            visibility: visible;
+            color: $theme-color;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      border-color: $theme-color;
+
+      .thumb {
+        img {
+          transform: scale(1.1);
+        }
+      }
+
+      .news-btns {
+        i {
+          background-color: $theme-color;
+          color: $bg-color-2;
+        }
+
+        a {
+          left: 0;
+          opacity: 1;
+          visibility: visible;
+          color: $white;
+        }
+      }
+    }
+  }
+
+
+.main-sidebar {
+
+  .single-sidebar-widget {
+    background: $bg-color;
+    padding: 32px;
+    border-radius: 16px;
+
+    .wid-title {
+      h3 {
+        border-bottom: $border-color;
+        padding-bottom: 16px;
+      }
+
+      &:not(&:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+
+    .search-widget {
+      form {
+        width: 100%;
+        position: relative;
+
+        input {
+          background-color: $bg-color;
+          padding: 16px 20px;
+          width: 100%;
+          border: none;
+          color: $header-color;
+          border-radius: 8px;
+        }
+
+        button {
+          position: absolute;
+          top: 8px;
+          right: 8px;
+          font-size: 18px;
+          width: 44px;
+          height: 44px;
+          color: $bg-color-2;
+          background-color: $theme-color;
+          border-radius: 100px;
+          text-align: center;
+          @include transition;
+
+          &:hover {
+            color: $white;
+            background-color: $header-color;
+          }
+        }
+      }
+    }
+
+    .categories-items {
+      li {
+        @include flex;
+        justify-content: space-between;
+        background-color: $bg-color;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        @include transition;
+        border-radius: 8px;
+        padding: 16px;
+        border: 1.2px solid transparent;
+
+        a {
+          color: $header-color;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+
+        &:hover {
+          background-color: $theme-color;
+          border-color: $theme-color;
+          color: $bg-color-2;
+
+          a {
+            color: $bg-color-2;
+          }
+        }
+      }
+    }
+
+    .recent-post-area {
+
+      .recent-item {
+        @include flex;
+        gap: 16px;
+
+        @include breakpoint(max-xl) {
+          flex-wrap: wrap;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 22px;
+        }
+
+        .thumb {
+          img {
+            border-radius: 8px;
+          }
+        }
+
+        .content {
+          h6 {
+
+            a {
+              &:hover {
+                color: $theme-color;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .tagcloud {
+      a {
+        display: inline-block;
+        padding: 8px 16px;
+        line-height: 1;
+        color: $text-color;
+        background: $bg-color;
+        margin-right: 5px;
+        text-transform: capitalize;
+        margin-bottom: 10px;
+        border-radius: 100px;
+        border: 1.2px solid transparent;
+        @include transition;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &:hover {
+          color: $bg-color-2;
+          background: $theme-color;
+          border-color: $theme-color;
+        }
+      }
+    }
+  }
+}
+
+.news-standard-wrapper {
+  margin-left: 20px;
+
+  @include breakpoint(max-xl) {
+    margin-left: 0;
+  }
+
+  .news-standard-items {
+    border: $border-color;
+    border-radius: 16px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    .news-thumb {
+      img {
+        @include imgw;
+        border-radius: 16px 16px 0 0;
+      }
+    }
+
+    .news-content {
+      padding: 18px 38px 32px;
+
+      @include breakpoint(max-lg) {
+        padding: 20px;
+      }
+
+      .news-meta {
+        @include flex;
+        gap: 24px;
+        margin-bottom: 10px;
+
+        .green {
+          color: $theme-color;
+        }
+
+        .date {
+          span {
+            width: 5px;
+            height: 5px;
+            border-radius: 100px;
+            background-color: $text-color;
+            display: inline-block;
+            margin-bottom: 3px;
+            margin-right: 3px;
+          }
+        }
+      }
+
+      .content {
+        margin-bottom: 12px;
+
+        h3 {
+          margin-bottom: 10px;
+
+          @include breakpoint(max-xl) {
+            font-size: 30px;
+          }
+
+          @include breakpoint(max-sm) {
+            font-size: 20px;
+          }
+
+          &:hover {
+            a {
+              color: $theme-color;
+            }
+          }
+        }
+      }
+
+
+
+      .news-btn {
+        margin-top: 6px;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+
+        .icon {
+          width: 44px;
+          height: 44px;
+          border: 1.5px solid $theme-color;
+          border-radius: 100px;
+          @include flex;
+          justify-content: center;
+          cursor: pointer;
+
+          i {
+            color: $theme-color;
+            transform: rotate(-45deg);
+          }
+        }
+
+        .link-btn {
+          font-family: Manrope;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 24px;
+        }
+
+        &:hover {
+          .icon {
+            background-color: $theme-color;
+
+            i {
+              color: $header-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.news-details-area {
+  margin-right: 20px;
+
+  @include breakpoint(max-xl) {
+    margin-right: 0;
+  }
+
+  .single-news-post {
+    .news-thumb {
+      margin-bottom: 20px;
+
+      img {
+        @include imgw;
+        border-radius: 16px;
+      }
+    }
+
+    .news-content {
+
+      .ext {
+        font-size: 36px;
+        margin-bottom: 10px;
+
+        @include breakpoint(max-xl) {
+          font-size: 30px;
+        }
+      }
+
+      .news-meta {
+        @include flex;
+        gap: 24px;
+        margin-bottom: 10px;
+
+        .green {
+          color: $theme-color;
+        }
+
+        .date {
+          span {
+            width: 5px;
+            height: 5px;
+            border-radius: 100px;
+            background-color: $text-color;
+            display: inline-block;
+            margin-bottom: 3px;
+            margin-right: 3px;
+          }
+        }
+      }
+
+      .highlight-text {
+        border: 1px solid $theme-color;
+        border-radius: 18px;
+        background: $bg-color-2;
+        padding: 24px 40px;
+        margin: 30px 0;
+        position: relative;
+        z-index: 9;
+
+        @include breakpoint(max-xl){
+          padding: 20px;
+        }
+
+        .qoute-shape {
+          position: absolute;
+          top: 15px;
+          left: 43px;
+        }
+
+        .content {
+          text-align: center;
+
+          h6 {
+            font-size: 18px;
+
+            @include breakpoint(max-xl){
+              font-size: 16px;
+            }
+          }
+
+          .info {
+            margin-top: 10px;
+            @include flex;
+            justify-content: center;
+            gap: 10px;
+          }
+        }
+      }
+    }
+
+    .post-thumb {
+      margin-top: 20px;
+
+      img {
+        @include imgw;
+        border-radius: 20px;
+      }
+    }
+
+    .post-list {
+      margin-top: 20px;
+
+      li {
+        @include flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+
+        img {
+          margin-right: 12px;
+        }
+      }
+    }
+
+    .news-list {
+
+      .news-item {
+        margin-top: 20px;
+        display: flex;
+        gap: 12px;
+
+        .content {
+          @include flex;
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+      }
+    }
+
+    .comments-area {
+      margin-top: 40px;
+
+      .comments-heading {
+        margin-bottom: 10px;
+
+        @include breakpoint(max-sm) {
+          margin-bottom: 20px;
+        }
+      }
+
+      .blog-single-comment {
+        border-bottom: 1.2px solid rgba(102, 102, 102, 0.16);
+
+        @include breakpoint(max-sm) {
+          flex-wrap: wrap;
+          gap: 20px;
+        }
+
+        .content {
+          .head {
+            margin-bottom: 10px;
+          }
+
+          .reply {
+            border-radius: 50px;
+            padding: 5px 18px;
+            background-color: $theme-color;
+            color: $bg-color-2;
+            font-family: Manrope;
+            font-size: 16px;
+            font-weight: 600;
+          }
+        }
+
+        &.style-2 {
+          padding: 0 40px 24px;
+
+          @include breakpoint(max-xl) {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}

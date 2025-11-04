@@ -1,0 +1,124 @@
+.faq-1 {
+  position: relative;
+
+  .arrow-shape {
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+
+    @include breakpoint(max-xl) {
+      display: none;
+    }
+  }
+
+  .star-shape {
+    position: absolute;
+    bottom: 0;
+    left: 9%;
+
+    @include breakpoint(max-xl) {
+      display: none;
+    }
+  }
+
+  p {
+    margin-top: 10px;
+    margin-bottom: -10px;
+  }
+
+  h6 {
+    color: $header-color;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  .theme-btn {
+    margin-top: 20px;
+  }
+}
+
+.faq-items {
+  margin-right: 50px;
+  margin-top: 30px;
+
+  @include breakpoint(max-xl) {
+    margin-right: 0;
+  }
+
+  .accordion-item {
+    border-radius: 8px;
+    border: none;
+
+    .accordion-header {
+
+      .accordion-button {
+        color: $header-color;
+        box-shadow: none;
+        background-color: $bg-color;
+        padding: 24px;
+        text-transform: capitalize;
+        font-size: 20px;
+        font-weight: 800;
+
+        @include breakpoint(max-xl) {
+          font-size: 18px;
+          padding: 15px;
+        }
+
+        &::after {
+          content: '';
+          background-image: url('../img/icon/arrow-up.svg');
+          background-size: 25px;
+          transition: all 0.3s ease-in-out !important;
+        }
+        &:not(.collapsed)::after {
+          content: '';
+          background-image: url('../img/icon/arrow-down.svg');
+          background-size: 25px;
+          transform: rotate(0);
+        }
+
+        &.collapsed {
+          color: $header-color;
+          padding: 24px;
+
+          @include breakpoint(max-xl) {
+            padding: 15px;
+          }
+        }
+      }
+    }
+
+    .accordion-collapse {
+      .accordion-body {
+        padding-left: 30px;
+        padding-top: 0;
+        color: $text-color;
+        background-color: $bg-color;
+
+        @include breakpoint(max-xl) {
+          padding: 15px;
+        }
+      }
+    }
+  }
+
+  &.style-2 {
+    .accordion-item {
+
+      .accordion-header {
+
+        .accordion-button {
+             background-color: $bg-color-2;
+        }
+      }
+
+      .accordion-collapse {
+        .accordion-body {
+          color: $text-color;
+          background-color: $bg-color-2;
+        }
+      }
+    }
+  }
+}

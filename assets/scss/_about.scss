@@ -1,0 +1,358 @@
+
+
+.about-wrapper-1 {
+  border-top: 1px solid rgba(193, 193, 193, 0.16);
+  margin-top: 48px;
+
+  .about-box-item {
+    background-color: $bg-color;
+    padding: 48px;
+    margin-top: 60px;
+
+    @include breakpoint (max-xl) {
+      padding: 30px;
+      margin-top: 30px;
+    }
+
+    &.style-2 {
+      margin-top: 100px;
+
+      @include breakpoint (max-xl) {
+        margin-top: 30px;
+      }
+    }
+
+    h2 {
+      font-size: 100px;
+      font-weight: 800;
+      margin-bottom: 10px;
+
+        @include breakpoint (max-xl) {
+         font-size: 50px;
+      }
+    }
+
+    h3 {
+      color: $text-color;
+
+      span {
+        display: inline-block;
+        margin-left: 70px;
+
+        @include breakpoint (max-xl) {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+
+
+.about-wrapper-2 {
+
+  .about-content {
+
+    .about-button {
+      margin-top: 80px;
+      @include flex;
+      gap: 25px;
+
+      @include breakpoint(max-xl) {
+        flex-wrap: wrap;
+        margin-top: 30px;
+      }
+
+      .theme-btn {
+
+        &.style-2 {
+          background-color: transparent;
+          border: 1px solid $white;
+          color: $white;
+
+          &::before {
+            background-color: $theme-color;
+          }
+
+          &:hover {
+             color: $bg-color-2;
+             border: 1px solid $theme-color;
+          }
+        }
+
+        @include breakpoint(max-sm) {
+          padding: 18px 25px;
+        }
+      }
+    }
+  }
+
+  .about-item {
+    border-left: 1px solid rgba(193, 193, 193, 0.24);
+    padding-left: 60px;
+
+    @include breakpoint (max-xl) {
+       border-left: none;
+       padding-left: 0;
+    }
+
+    p {
+      max-width: 408px;
+      margin-bottom: 30px;
+    }
+
+
+    .count-item {
+       @include flex;
+       gap: 75px;
+
+        @include breakpoint (max-lg) {
+          gap: 50px;
+       }
+
+       @include breakpoint (max-sm) {
+        gap: 20px;
+       }
+
+       .client-reviews {
+      
+        .cr-item {
+          margin-bottom: 24px;
+
+          h2 {
+            font-size: 48px;
+
+            @include breakpoint(max-xl) {
+              font-size: 35px;
+            }
+
+            @include breakpoint(max-sm) {
+              font-size: 30px;
+            }
+        }
+
+        p {
+          color: $text-color;
+          font-weight: 400;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+       .count-box {
+          background-color: $bg-color-2;
+          padding: 40px 24px;
+          border-radius: 16px;
+          width: 174px;
+
+          h2 {
+             color: $white;
+             margin-bottom: 10px;
+          }
+
+          p {
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 0;
+          }
+       }
+    }
+  }
+
+  .about-bg-box {
+    text-align: center;
+    padding: 45px 20px;
+    background-color: $theme-color;
+    border-radius: 24px;
+
+    @include breakpoint (max-xl) {
+      padding: 30px 20px;
+    }
+    
+    h3 {
+      color: $bg-color-2;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.about-wrapper-3 {
+
+  .about-images {
+    position: relative;
+
+    .circle-image {
+      width: 188px;
+      height: 188px;
+      background: $bg-color;
+      border-radius: 100px;
+      position: absolute;
+      bottom: 5%;
+      left: -15%;
+      padding: 10px;
+
+      img {
+        animation: initial;
+      }
+
+      @include breakpoint(max-xxxl) {
+          left: -7%;
+      }
+
+      @include breakpoint(max-xl) {
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%,-50%);
+      }
+
+      .text-image {
+        position: relative;
+
+        .client-image {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%,-50%);
+
+           img {
+            animation: initial;
+            width: initial;
+            height: initial;
+          }
+        }
+          img {
+          animation: cir36 10s linear infinite;
+        }
+      }
+    }
+
+    img {
+      @include imgw;
+      border-radius: 16px;
+    }
+  }
+
+  .about-content {
+    margin-left: 50px;
+
+    @include breakpoint (max-xl) {
+      margin-left: 0;
+    }
+
+    .section-title {
+      p {
+        margin-top: 12px;
+      }
+    }
+
+    .text {
+      @include flex;
+      gap: 24px;
+      margin-bottom: 20px;
+
+      @include breakpoint (max-xl) {
+        margin-top: 30px;
+      }
+
+      p {
+        color: $white;
+      }
+    }
+
+    .items {
+      @include flex;
+      gap: 40px;
+      margin-bottom: 30px;
+
+      @include breakpoint(max-xl) {
+        gap: 20px;
+      }
+
+      @include breakpoint(max-sm) {
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      .item {
+        @include flex;
+        gap: 16px;
+
+        @include breakpoint(max-xl) {
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+
+        .icon {
+          width: 56px;
+          height: 56px;
+          border-radius: 100px;
+          background: $bg-color;
+          @include flex;
+          justify-content: center;
+        }
+      }
+    }
+
+    .about-btn {
+      margin-top: 40px;
+      @include flex;
+      gap: 24px;
+
+      @include breakpoint(max-sm) {
+        gap: 20px;
+      }
+
+      .video-btn {
+        @include flex;
+        gap: 9px;
+
+        span {
+          margin-bottom: 0;
+        }
+
+        .icon {
+          width: 56px;
+          height: 56px;
+          border-radius: 100px;
+          border: $border-color-2;
+          @include flex;
+          justify-content: center;
+
+          i {
+            color: $theme-color;
+          }
+        }
+
+        .textx {
+          font-family: Manrope;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+.about-3 {
+  position: relative;
+
+  .scales-shape {
+    position: absolute;
+    right: 50px;
+    bottom: 0;
+    
+    @include breakpoint(max-xl) {
+      display: none;
+    }
+  }
+
+  .order-shape {
+    position: absolute;
+    top: 12%;
+    left: 5%;
+    
+    @include breakpoint(max-xl) {
+      display: none;
+    }
+  }
+}

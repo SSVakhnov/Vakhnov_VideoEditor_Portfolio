@@ -1,0 +1,113 @@
+.funfact-wrapper {
+  padding: 48px 0px;
+  border-radius: 8px 24px;
+  background: $bg-color-2;
+  text-align: center;
+  position: relative;
+  z-index: 9;
+  margin-top: -115px;
+  border-bottom: 1px solid rgba(193, 193, 193, 0.24);
+
+  @include breakpoint(max-xl) {
+    margin-top: -120px;
+  }
+
+  @include breakpoint(max-lg) {
+    margin-top: -148px;
+  }
+
+  .item {
+    h4 {
+      font-size: 60px;
+      line-height: 72px;
+    }
+  }
+}
+
+.error-section {
+  margin-top: -32px;
+}
+
+.error-wrapper {
+  text-align: center;
+
+  .error {
+
+    h2 {
+      color: $theme-color;
+      font-size: 150px;
+
+      @include breakpoint(max-xl) {
+        font-size: 140px;
+      }
+
+      @include breakpoint(max-lg) {
+        font-size: 130px;
+      }
+
+      @include breakpoint(max-sm) {
+        font-size: 100px;
+      }
+    }
+  }
+
+  .error-content {
+    h2 {
+      font-size: 72px;
+
+      @include breakpoint(max-xl) {
+        font-size: 60px;
+      }
+
+      @include breakpoint(max-lg) {
+        font-size: 50px;
+      }
+
+      @include breakpoint(max-sm) {
+        font-size: 30px;
+      }
+
+      span {
+        color: $theme-color;
+      }
+    }
+
+    p {
+      margin-top: 22px;
+    }
+  }
+
+  .error-btn {
+    margin-top: 45px;
+    @include flex;
+    justify-content: center;
+    gap: 32px;
+
+    @include breakpoint(max-sm) {
+      gap: 10px;
+    }
+
+    .theme-btn {
+      padding: 18px 30px;
+
+      @include breakpoint(max-sm) {
+        padding: 14px 22px;
+      }
+      
+      &.style-2 {
+        border: 1px solid $header-color;
+        background-color: transparent;
+        color: $white;
+
+        &::before {
+           background-color: $theme-color;
+        }
+
+        &:hover {
+          color: $bg-color-2;
+           border: 1px solid $theme-color;
+        }
+      }
+    }
+  }
+}

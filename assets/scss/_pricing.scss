@@ -1,0 +1,116 @@
+.price-wrapper {
+    .price-item {
+        margin-top: 30px;
+        padding: 40px 32px;
+        background-color: $bg-color-2;
+        border-radius: 16px;
+        border: 1.5px solid transparent;
+        @include transition;
+
+
+        @include breakpoint(max-xl){
+            padding: 40px 30px;
+        }
+
+        .content {
+            border-bottom: 1px solid rgba(193, 193, 193, 0.16);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+
+            h3 {
+                font-size: 40px;
+                color: $theme-color;
+                margin-top: 5px;
+                margin-bottom: 10px;
+
+                span {
+                    color: $text-color;
+                    font-family: Manrope;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .price-list {
+            li {
+                @include flex;
+                gap: 10px;
+                 color: $text-color;
+                margin-bottom: 10px;
+
+                i {
+                    color: $text-color;
+                }
+            }
+        }
+
+        .theme-btn {
+            margin-top: 25px;
+            display: block;
+            background-color: transparent;
+            border: 1px solid $theme-color;
+            text-align: center;
+            color: $theme-color;
+
+            @include breakpoint(max-xl){
+                padding: 14px 10px;
+            }
+
+            @include breakpoint(max-lg){
+                padding: 20px;
+            }
+
+            @include breakpoint(max-md){
+                padding: 15px;
+            }
+
+            @include breakpoint(max-sm){
+                padding: 15px;
+            }
+
+            &:hover {
+
+                &::before {
+                    background-color: $theme-color;
+                }
+                color: $bg-color-2;
+            }
+        }
+
+        &:hover {
+            border-color:  $theme-color;
+            background: $bg-color;
+            transform: translateY(-15px);
+
+            .price-list {
+                li {
+                    color: $white;
+
+                    i {
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        &.style-2 {
+            position: relative;
+
+            .content {
+                .box {
+                    position: absolute;
+                    background-color: $bg-color;
+                    color: $white;
+                    padding: 4px 8px;
+                    border-radius: 100px;
+                    top: 12px;
+                    right: 12px;
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,716 @@
+.awards-section {
+  position: relative;
+
+  .trophy-shape {
+    position: absolute;
+    right: 24%;
+    bottom: 0;
+
+    @include breakpoint(max-xl) {
+      display: none;
+    }
+  }
+
+   .top-shape {
+     position: absolute;
+     top: 30px;
+     left: 38%;
+
+      @include breakpoint(max-xl) {
+        display: none;
+      }
+  }
+
+  .star-shape {
+    position: absolute;
+    bottom: 20%;
+    right: 41%;
+
+    @include breakpoint(max-xl) {
+      display: none;
+    }
+  }
+}
+
+.awards-wrapper {
+
+  .awards-item {
+    padding: 30px;
+    @include flex;
+    justify-content: space-between;
+    border-radius: 16px;
+    border: $border-color;
+    background: $bg-color;
+    @include transition;
+
+    @include breakpoint(max-xl) {
+      align-items: end;
+      padding: 20px;
+    }
+
+    @include breakpoint(max-lg) {
+      flex-wrap: wrap;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .content {
+      @include flex;
+      gap: 24px;
+
+      @include breakpoint(max-xl) {
+        flex-wrap: wrap;
+        gap: 15px;
+
+        .icon {
+          width: 100%;
+        }
+      }
+
+      .text {
+        h4 {
+
+          @include breakpoint(max-xl) {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      border-color: $theme-color;
+      background: $bg-color-2;
+    }
+  }
+}
+
+.experience-section {
+  position: relative;
+
+  .random-shape {
+    position: absolute;
+    top: 17%;
+    right: 11%;
+
+    @include breakpoint(max-xl) {
+      display: none;
+    }
+  }
+
+  .section-title {
+    span,
+    h2 {
+      color: $white;
+    }
+  }
+}
+
+.experience-wrapper {
+  margin-top: 30px;
+
+  .experience-items {
+    @include flex;
+    justify-content: space-between;
+    border-bottom: $border-color;
+    padding: 20px 0;
+    @include transition;
+
+    @include breakpoint(max-md){
+      gap: 20px;
+      flex-direction: column;
+      align-items: start;
+    }
+
+    span {
+      color: #bbbbbc;
+      font-family: Manrope;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    h4 {
+      color: $white;
+      cursor: pointer;
+
+      @include breakpoint(max-lg){
+        font-size: 20px;
+      }
+    }
+
+    h6 {
+      color: $white;
+      cursor: pointer;
+
+      @include breakpoint(max-lg){
+        font-size: 16px;
+      }
+    }
+
+    &:hover {
+      border-color: $theme-color;
+
+      h4 {
+        color: $theme-color;
+      }
+    }
+  }
+}
+
+.client-wrapper {
+  margin-top: 80px;
+  padding: 30px;
+  border: $border-color;
+  background-color: $bg-color-2;
+  border-radius: 24px;
+
+  @include breakpoint(max-xl) {
+    padding: 20px;
+  }
+
+  .client-items {
+    @include flex;
+    justify-content: space-between;
+
+    @include breakpoint(max-lg) {
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: left;
+    }
+
+    @include breakpoint(max-sm) {
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .client-item {
+      text-align: center;
+      max-width: 220px;
+      width: 100%;
+      position: relative;
+
+      @include breakpoint(max-lg) {
+        max-width: 198px;
+      }
+
+      @include breakpoint(max-sm) {
+        max-width: 160px;
+      }
+
+      &:not(:last-child){
+        &::before {
+          position: absolute;
+          content: '';
+          width: 1px;
+          height: 137px;
+          background: #666;
+          opacity: 0.24;
+          top: -30px;
+          right: 0;
+
+          @include breakpoint(max-xl) {
+            height: 114px;
+            top: -20px;
+          }
+
+          @include breakpoint(max-lg) {
+            display:  none;
+          }
+        }
+      }
+  
+      .number {
+        color: $theme-color;
+        margin-right: 16px;
+      }
+  
+      .text {
+        color: #bbbcbd;
+        font-family: Manrope;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.client-wrapper-2 {
+
+  .client-item-wrapper{
+    margin-right: 50px;
+    @include flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @include breakpoint(max-lg) {
+      justify-content: space-between;
+    }
+    
+
+    .client-item {
+      border: $border-color-3;
+      border-radius: 16px;
+      padding:28px;
+      background: rgba(102, 102, 102, 0.08);
+      text-align: center;
+      @include transition;
+
+      .content {
+       margin: -3px;
+
+        h2 {
+          color: $white;
+
+          @include breakpoint (max-xl) {
+            font-size: 40px;
+          }
+        }
+
+        p {
+          color: #bdbdbe;
+        }
+      }
+
+      &.style-2 {
+        background: none;
+        border: 0;
+        padding: 23px;
+
+        a {
+          color: $theme-color;
+          border-bottom: $border-color-2;
+        }
+      }
+
+      &:hover {
+        border-color: $theme-color;
+      }
+    }
+
+    @include breakpoint(max-xl) {
+      margin-right: 0;
+    }
+  }
+
+  .client-content {
+    .section-title {
+      span {
+        color: $white;
+      }
+
+      h2 {
+        color: $white;
+      }
+    }
+
+    p { 
+      color: #bbbbbc
+    }
+  }
+
+  .icon {
+    margin-top: 30px
+  }
+}
+
+.experience-wrapper-2 {
+  margin-top: 30px;
+  margin-bottom: 120px;
+
+  @include breakpoint (max-xl) {
+    margin-bottom: 100px;
+  }
+
+  @include breakpoint (max-lg) {
+    margin-bottom: 80px;
+  }
+  
+  .skill-list {
+    @include flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    @include breakpoint(max-lg) {
+      gap: 15px;
+    }
+
+    @include breakpoint(max-sm) {
+      gap: 10px;
+    }
+
+    li {
+      @include flex;
+      gap: 5px;
+      color: $white;
+      padding: 8px 24px;
+      border-radius: 100px;
+      border: 1px solid rgba(193, 193, 193, 0.16);
+      background: rgba(193, 193, 193, 0.04);
+      backdrop-filter: blur(24px);
+      @include transition;
+
+      @include breakpoint(max-sm) {
+        padding: 8px 16px
+      }
+
+      &:hover {
+        border-color: $theme-color;
+      }
+    }
+  }
+  h6 {
+    margin-top: 50px;
+    text-align: center;
+    color: $white;
+
+    .link-btn {
+      color: $theme-color;
+    }
+  }
+}
+
+.work-section {
+  position: relative;
+
+  .star-shape {
+    position: absolute;
+    top: 15%;
+    right: 11%;
+
+    @include breakpoint(max-xl) {
+      display: none;
+    }
+  }
+}
+
+.work-wrapper {
+  position: relative;
+  z-index: 9;
+
+  &::before{
+    content: '';
+    position: absolute;
+    height: 1.5px;
+    width: 815px;
+    background-color: #C1C1C1;
+    opacity: 0.24;
+    top: 32%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+
+    @include breakpoint(max-xl){
+      top: 30%;
+      width: 565px;
+    }
+
+    @include breakpoint(max-lg){
+      display: none;
+    }
+
+  }
+  .work-items {
+    margin-top: 30px;
+    text-align: center;
+
+    .icon {
+      width: 90px;
+      height: 90px;
+      border-radius: 100px;
+      background: $bg-color-2;
+      place-content: center;
+      margin: 0 auto;
+      @include transition;
+
+      @include breakpoint(max-xl) {
+        width: 70px;
+        height: 70px;
+
+        img {
+          width: 25px;
+          height: 25px;
+        }
+      }
+      @include breakpoint(max-lg) {
+        width: 60px;
+        height: 60px;
+      }
+    }
+    .content {
+      margin-top: 20px;
+      h4 {
+        margin-bottom: 10px;
+      }
+    }
+
+    &:hover {
+      .icon {
+        background: $theme-color;
+
+        img {
+          filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+        }
+      }
+    }
+  }
+}
+
+.feature-wrapper {
+  margin-top: -120px;
+  position: relative;
+  z-index: 9;
+
+  @include breakpoint(max-xl) {
+    margin-top: 0;
+  }
+
+  .feature-item {
+    padding: 64px 48px;
+    border: $border-color;
+    border-radius: 16px;
+    background: $bg-color;
+    text-align: center;
+
+    @include breakpoint(max-xl) {
+      padding: 20px;
+    }
+
+    .icon {
+      width: 100px;
+      height: 100px;
+      background-color: $bg-color-2;
+      border-radius: 100px;
+      @include flex;
+      justify-content: center;
+      margin: 0 auto 20px;
+      @include transition;
+
+      @include breakpoint(max-xl) {
+        width: 80px;
+        height: 80px;
+      }
+
+       img {
+        @include transition;
+        display: inline-block;
+      }
+    }
+
+    .content {
+      h4 {
+        margin-bottom: 10px;
+
+        a {
+          &:hover {
+            color: $theme-color;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      border-color: $theme-color;
+
+      .icon {
+        background: $theme-color;
+
+        img {
+          filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+           transform: scaleX(-1) !important;
+        }
+      }
+    }
+
+    &.style-2 {
+      border-color: $theme-color;
+
+      .icon {
+        background: $theme-color;
+      }
+    }
+  }
+}
+
+.feature-section {
+
+  @include breakpoint (max-xl) {
+     margin-top: 100px;
+   }
+
+   @include breakpoint (max-lg) {
+     margin-top: 80px;
+   }
+}
+.experience-3 {
+  
+  .section-title {
+    h2 {
+      color: $header-color;
+    }
+  }
+
+  .experience-main-wrapper {
+
+    .content-item {
+      margin-top: 30px;
+      border: $border-color;
+      border-radius: 16px;
+      overflow: hidden;
+
+      .head {
+        @include flex;
+        justify-content: space-between;
+        padding: 20px 32px;
+        background-color: $bg-color;
+
+        @include breakpoint(max-lg) {
+          padding: 20px;
+        }
+
+        @include breakpoint(max-sm) {
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+
+        h4 {
+          img {
+            margin-right: 24px;
+          }
+
+          @include breakpoint(max-lg) {
+            font-size: 20px;
+
+            img {
+              margin-right: 10px;
+            }
+          }
+
+          @include breakpoint(max-sm) {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .text {
+        border-top: $border-color;
+        padding: 24px 32px;
+        @include flex;
+        justify-content: space-between;
+        background: rgba(255, 255, 255, 0.08);
+
+        @include breakpoint(max-lg) {
+          padding: 20px;
+        }
+
+        @include breakpoint(max-sm) {
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+
+        .list {
+
+          li {
+            margin-bottom: 10px;
+
+            i {
+              margin-right: 16px;
+              color: $white;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        border-color: $theme-color;
+
+        .text {
+          border-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+
+.social-media-area {
+ padding: 20px 0;
+
+  h4 {
+    color: $white;
+    border-right: $border-color-3;
+
+    @include breakpoint(max-xl) {
+      border-right: 0;
+    }
+  }
+  
+}
+
+
+.scrolling-wrap {
+	overflow: hidden;
+	white-space: nowrap;
+	display: flex;
+	gap: 30px;
+  padding: 100px 0 0;
+
+    @include breakpoint (max-lg) {
+        padding: 80px 0 0;
+    }
+
+	.comm {
+		display: flex;
+		align-items: center;
+		animation: scroll 60s linear infinite;
+		gap: 30px;
+		cursor: pointer;
+
+		.cmn-textslide {
+			font-size: 124px;
+			font-weight: 800;
+			line-height: 156px;
+      letter-spacing: -1.24px;
+      font-family: $heading-font;
+      @include flex;
+      gap: 30px;
+      -webkit-text-stroke-width: 1px;
+				-webkit-text-stroke-color: $text-color;
+        opacity: 0.7;
+				color: transparent;
+				@include transition;
+        
+        &:hover {
+					color: $theme-color;
+          -webkit-text-stroke-color: $theme-color;
+          opacity: initial;
+				}
+		}
+	}
+
+	&:hover {
+		.comm {
+			animation-play-state: paused;
+		}
+	}
+
+	@include breakpoint (max-xxl) {
+		.comm {
+			gap: 20px;
+		}
+	}
+
+	@include breakpoint (max-lg) {
+		gap: 14px;
+		.comm {
+			gap: 14px;
+		}
+	}
+
+	@include breakpoint (max-sm) {
+		.comm {
+			gap: 12px;
+		}
+	}
+}
