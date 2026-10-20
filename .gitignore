@@ -1,0 +1,10 @@
+# Local working notes and asset-generation records
+/README.md
+/ASSET_NOTES.md
+
+# Local preview helper (not needed by the published site)
+/preview.mjs
+
+# Local agent workspace data
+/.codex/
+/.agents/
